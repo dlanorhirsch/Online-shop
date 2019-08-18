@@ -1,0 +1,44 @@
+
+
+.form-control label {
+    float: left;
+    clear: left;
+    width: 250px;
+    text-align: right;
+    padding-right: 8px;
+    font-size: 1rem;
+
+}
+.form-control input {
+    float: left;
+    cursor: pointer;
+    height: 15px;
+    width: 350px;
+    margin-bottom: 12px;
+
+}
+
+.form-control {
+    display: block;
+    font-size: 1rem;
+
+  }
+
+label {
+    font-size: 1.2rem;
+}
+
+.btn {
+    display: block;
+    width: 75px;
+    text-decoration: none;
+    font: inherit;
+    background-color: #3635c1;
+    border: 1px solid black;
+    color: white;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+.btn:hover  {
+    background-color: #29299e;
+}

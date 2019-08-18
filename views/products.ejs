@@ -1,0 +1,28 @@
+
+<%- (include('../includes/head.ejs')); %>
+<%- (include('../includes/navigation.ejs')); %>
+<link rel="stylesheet" href="/css/main.css">
+
+
+    <h1><%= pageTitle %> </h1>
+    <article>
+        <% if (prods.length > 0) { %>
+            <div class="container">
+                <% for (let product of prods) { %>
+                    <div class="card">
+                        
+                            <img src=" <%= product.imageUrl %> " alt="Product Image">
+                            <div class="card-header"><%= product.title %></div>
+                            <br>
+                            <div class="card-content">Price: <%= product.price %> </div>
+                            <div class="card-content"> <%= product.description %></div>  
+                            
+                    </div>   
+                <% } %>  
+        <% } %>
+            </div>
+
+        
+    </article>
+<%- (include('../includes/footer.ejs')); %>
+

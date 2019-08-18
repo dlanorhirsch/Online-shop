@@ -1,0 +1,23 @@
+
+<%- (include('../includes/head.ejs')); %>
+<%- (include('../includes/navigation.ejs')); %>
+<link rel="stylesheet" href="/css/main.css">
+
+
+    <h1> <%= pageTitle %> </h1>
+        <% if (custs.length > 0) { %>
+            <div class="grid">
+                <% for (let customer of custs) { %>
+                     <div class="item">
+                        <div class="item-content">First Name: <%= customer.fName %></div>
+                        <div class="item-content">Last Name: <%= customer.lName %> </div>
+                        <div class="item-content">Email: <%= customer.email %></div>  
+                    </div>
+                <% } %>
+                   
+                <% } %>
+            
+                    
+        
+            </div> 
+<%- (include('../includes/footer.ejs')); %>

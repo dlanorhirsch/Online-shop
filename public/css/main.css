@@ -1,0 +1,110 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto";
+    background: #eef3fc;
+    writing-mode: horizontal-tb;
+
+}
+h1 {
+    text-align: center;
+    font-family: "Monserrat", sans-serif;
+    color: #6d6d6d;
+
+   
+
+}
+.nav-bar {
+    display: flex;
+    background-color: #252588;
+    margin: 0;
+    padding: 0;
+    height: 75px;
+    width: 100%;
+    align-items: center;
+    padding: 0 40px;
+    font-family: "Roboto", sans-serif;
+    
+}
+a {
+    display: flex;
+    justify-content: center;
+    color: white;
+    text-decoration: none;
+    padding: 20px; 
+}
+ul  {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* CUSTOMERS PAGE GRID DISPLAY */
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 100px 100px;
+    padding: 0;
+    margin: 0 45px;
+    grid-gap: 15px;
+    
+}
+.grid2 {
+    grid-auto-flow: row;
+
+}
+.item {
+    font-size: 1rem;
+    border: 2px solid #252588;
+    border-radius: 10px;
+    box-shadow:  10px 10px gray;
+    color: #6d6d6d;
+    
+}
+.item-content {
+    padding-left: 5px;
+    margin: 9px;
+    
+}
+
+/* CARD DISPLAY PRODUCTS PAGE */
+
+.card {
+    /* Add shadows to create the "card" effect */
+    box-shadow: 0 4px 8px 0 #00000066;
+    transition: 0.3s;
+    max-width: 250px;
+    margin: 30px;
+    font-family: "Montserrat", sans-serif;
+    border-radius: 5px;
+    
+  }
+.container {
+    padding: 2px 16px;
+    display: flex;
+    justify-content: center;
+  }
+img {
+    width: 100%;
+    border-radius: 0 5px;
+}
+.card-header {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+
+  }
+.card-content {
+    font-size: .8rem;
+    margin: 10px;
+    text-align: center;
+}
+
+  /* On mouse-over, add a deeper shadow */
+.card:hover {
+    box-shadow: 0 8px 16px 0 #00000080;
+}
+  
+
