@@ -1,44 +1,40 @@
 
-
-.form-control label {
-    float: left;
-    clear: left;
-    width: 250px;
-    text-align: right;
-    padding-right: 8px;
-    font-size: 1rem;
-
-}
-.form-control input {
-    float: left;
-    cursor: pointer;
-    height: 15px;
-    width: 350px;
-    margin-bottom: 12px;
-
-}
-
 .form-control {
     display: block;
-    font-size: 1rem;
-
-  }
-
-label {
-    font-size: 1.2rem;
+    width: 20rem;
+    margin: auto;
+    padding-top: 10px;
+    
 }
 
+input.form-control,
+textarea.form-control {
+    padding: 0;
+    font-size: .8rem;
+    height: 1.5rem;
+    border: 1px solid #252588;
+    box-shadow: 0 8px 16px 0 #00000080;
+    border-radius: 5px;
+
+}
+label.form-control {
+    padding-bottom: 5px;
+}
 .btn {
     display: block;
-    width: 75px;
-    text-decoration: none;
-    font: inherit;
-    background-color: #3635c1;
-    border: 1px solid black;
+    font-size: 1rem;
+    background-color: white;
+    color: whi#252588;
+    width: 100px;
+    height: 35px;
+    border: 1px solid #252588;
+    border-radius: 6px;
+    margin: 0 auto;
+    margin-top: 20px;
+
+}
+
+.btn:hover {
+    background-color: #252588;
     color: white;
-    border-radius: 3px;
-    cursor: pointer;
-  }
-.btn:hover  {
-    background-color: #29299e;
 }

@@ -3,8 +3,9 @@ const Customer = require('../models/customer');
 
 
 exports.getHomePage = (req, res, next) => {
-    res.render('homepage', {
+    res.render('shop/homepage', {
         pageTitle: "Home Page"
+        
         
     });
 };
@@ -14,14 +15,14 @@ const customers = [];
 //  CUSTOMERS PAGES  //
 exports.getCustomersPage = (req, res, next) => {
         const customers = Customer.fetchAll();
-    res.render ('customers', {
+    res.render ('admin/customers', {
         custs: customers,
         pageTitle: "Customers",
         path: '/customers',
     });
 }; 
 exports.getAddCustomerPage = (req, res, next) => {
-    res.render('add-customer', {
+    res.render('admin/add-customer', {
         pageTitle: "Add-Customer Page"
     });
 };
@@ -37,10 +38,23 @@ exports.postAddCustomer = (req, res, next) => {
 
 //  PRODUCTS PAGES  //
 exports.getAddProductPage = (req, res, next) => {
-    res.render('add-product', {
+    res.render('admin/add-product', {
         pageTitle: "Add-Product Page"
     });
 };
+
+exports.getProductDetail = (req, res, next) => {
+    const prodId = req.params.productId;
+    Product.findById(prodId, product => {
+    res.render('shop/product-detail', {
+        product: product,
+        pageTitle: product.title,
+        path: '/products'
+    });
+    });
+    
+  };
+
 exports.postAddProduct= (req, res, next) => {
     const product = new Product(
         req.body.title,
@@ -53,12 +67,18 @@ exports.postAddProduct= (req, res, next) => {
 };
 exports.getProductsPage = (req, res, next) => {
     Product.fetchAll(products => {
-        res.render ('products', {
+        res.render ('shop/products', {
             prods: products,
-            pageTitle: "Products...",
+            pageTitle: "Products",
             path: '/products',
             hasProducts: products.length > 0
         });
     
     }); 
 };
+exports.getContactInfo = (req, res, next) => {
+    res.render('admin/contact-info', {
+        pageTitle: "Contact Information"
+    });
+};
+

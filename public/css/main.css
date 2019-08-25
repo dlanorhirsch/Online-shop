@@ -2,14 +2,16 @@ body {
     margin: 0;
     padding: 0;
     font-family: "Roboto";
-    background: #eef3fc;
+    background: #ebecee;
     writing-mode: horizontal-tb;
 
 }
 h1 {
     text-align: center;
     font-family: "Monserrat", sans-serif;
-    color: #6d6d6d;
+    color: #248886;
+    font-size: 3rem;
+    
 
    
 
@@ -24,15 +26,11 @@ h1 {
     align-items: center;
     padding: 0 40px;
     font-family: "Roboto", sans-serif;
+    text-align: center;
+    
     
 }
-a {
-    display: flex;
-    justify-content: center;
-    color: white;
-    text-decoration: none;
-    padding: 20px; 
-}
+
 ul  {
     margin: 0;
     padding: 0;
@@ -58,8 +56,9 @@ ul  {
     font-size: 1rem;
     border: 2px solid #252588;
     border-radius: 10px;
-    box-shadow:  10px 10px gray;
+    box-shadow:  5px 5px #6d6d6d;
     color: #6d6d6d;
+    
     
 }
 .item-content {
@@ -72,14 +71,20 @@ ul  {
 
 .card {
     /* Add shadows to create the "card" effect */
-    box-shadow: 0 4px 8px 0 #00000066;
+    
     transition: 0.3s;
     max-width: 250px;
     margin: 30px;
     font-family: "Montserrat", sans-serif;
+    background: white;
     border-radius: 5px;
     
   }
+  .centered {
+      text-align: center;
+
+  }
+
 .container {
     padding: 2px 16px;
     display: flex;
@@ -87,6 +92,7 @@ ul  {
   }
 img {
     width: 100%;
+    height: auto;
     border-radius: 0 5px;
 }
 .card-header {
@@ -94,17 +100,63 @@ img {
     font-size: 1.2rem;
     font-weight: bold;
     text-align: center;
+    margin: 10px auto 0;
+    padding: 0;
+}
+.card-header::after {
+    content: "";
+    display: block;
+    background: #252588;
+    width: 85%;
+    height: 1px;
+    margin: 10px auto 0;
+    padding: 0;
+    
+}
+.card-content1 {
+    font-size: 1rem;
+    margin: 0 auto;
 
-  }
-.card-content {
+}
+.card-content2 {
     font-size: .8rem;
-    margin: 10px;
+    margin: 10px 10px;
+}
+.card-content1,
+.card-content2 {
     text-align: center;
 }
-
   /* On mouse-over, add a deeper shadow */
 .card:hover {
-    box-shadow: 0 8px 16px 0 #00000080;
+    box-shadow: 0 16px 16px 0 #00000080;
 }
-  
 
+a {
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    padding: 20px; 
+    color: #b1f4f3;
+}
+a:hover {
+    color: #248886;
+}
+
+a.btn1 {
+    border: 1px solid #252588;
+    color: #252588;
+    display: inline-block;
+    width: 40%;
+    height: 2rem;
+    padding: 0;
+    border-radius: 6px;
+    text-align: center;
+    margin: 0 8px;
+    padding-top: 10px;
+    font-size: .9rem;
+     
+}
+a.btn1:hover {
+    background-color: #252588;
+    color: white;
+}
