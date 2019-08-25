@@ -1,0 +1,35 @@
+
+<%- (include('../includes/head.ejs')) %>
+<%- (include('../includes/navigation.ejs')) %>
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<div class="container">
+    <div class="card">
+        <img src=" <%= product.imageUrl %> " alt="Product Image">
+        <div class="card-header"><%= product.title %></div>      
+        <br>
+        <div class="card-content1">Price: <%= product.price %> </div>
+        <div class="card-content2"> <%= product.description %></div>  
+        <div class="product-btns">
+            
+        <a href="/cart" class="btn1">Add to Cart</a>
+    </div>   
+</div>
+
+<!-- <main class="centered">
+            <h1><%= product.title %></h1>
+            <hr>
+            <div>
+                <img src="<%= product.imageUrl %>" alt="<%= product.title %>">
+            </div>
+            <h2>$<%= product.price %></h2>
+            <p><%= product.description %></p>
+            <form action="/cart" method="post">
+                <button class="btn" type="submit">Add to Cart</button>
+            </form>
+        </main> -->
+
+<%- (include('../includes/footer.ejs')) %>
+ 
