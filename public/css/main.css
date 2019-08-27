@@ -56,8 +56,9 @@ ul  {
     font-size: 1rem;
     border: 2px solid #252588;
     border-radius: 10px;
-    box-shadow:  5px 5px #6d6d6d;
+    box-shadow: 0 8px 16px 0 #00000080;
     color: #6d6d6d;
+    
     
     
 }
@@ -69,12 +70,25 @@ ul  {
 
 /* CARD DISPLAY PRODUCTS PAGE */
 
+.img-div {
+    max-width: 250px;
+    max-height: 250px;
+}
+.img {
+    max-width: 250px;
+    min-height: 190px;
+    max-height: 190px;
+    
+}
 .card {
     /* Add shadows to create the "card" effect */
     
     transition: 0.3s;
+    min-width: 250px;
     max-width: 250px;
-    margin: 30px;
+    min-height: 400px;
+    max-height: 400px;
+    margin: 20px;
     font-family: "Montserrat", sans-serif;
     background: white;
     border-radius: 5px;
@@ -128,7 +142,7 @@ img {
 }
   /* On mouse-over, add a deeper shadow */
 .card:hover {
-    box-shadow: 0 16px 16px 0 #00000080;
+    box-shadow: 0 16px 32px 0 #00000080;
 }
 
 a {
@@ -141,8 +155,11 @@ a {
 a:hover {
     color: #248886;
 }
-
-a.btn1 {
+.product-btns {
+    
+    justify-items: center;
+}
+.btn1 {
     border: 1px solid #252588;
     color: #252588;
     display: inline-block;
@@ -154,9 +171,12 @@ a.btn1 {
     margin: 0 8px;
     padding-top: 10px;
     font-size: .9rem;
+    
      
 }
-a.btn1:hover {
+.btn1:hover {
     background-color: #252588;
     color: white;
+    transition: 0.3s;
 }
+

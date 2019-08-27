@@ -20,7 +20,7 @@ textarea.form-control {
 label.form-control {
     padding-bottom: 5px;
 }
-.btn {
+.form-btn {
     display: block;
     font-size: 1rem;
     background-color: white;

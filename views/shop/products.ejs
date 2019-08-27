@@ -11,14 +11,18 @@
             <div class="container">
                 <% for (let product of prods) { %>
                     <div class="card">
-                        <img src=" <%= product.imageUrl %> " alt="Product Image">
+                        <div class="img-div">
+                            <img src=" <%= product.imageUrl %> " class='img' alt="Product Image">
+                        </div>
                         <div class="card-header"><%= product.title %></div>         
                         <br>
                         <div class="card-content1">Price: <%= product.price %> </div>
                         <div class="card-content2"> <%= product.description %></div>  
                         <div class="product-btns">
-                        <a href="/products/<%= product.id %>" class="btn1">Details</a> 
-                        <a href="/cart" class="btn1">Add to Cart</a>
+                        <div class="product-btns">
+                            <a href="/products/<%= product.id %>" class="btn1">Details</a> 
+                            <a href="/cart" class="btn1">Add to Cart</a>
+                        </div>
                     </div>
                 </div>   
             <% } %>

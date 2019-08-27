@@ -21,11 +21,16 @@ exports.getCustomersPage = (req, res, next) => {
         path: '/customers',
     });
 }; 
+
+exports.getCustomerDetail = (req, res, next) => {
+    res.render('/admin/customerID');
+};
 exports.getAddCustomerPage = (req, res, next) => {
     res.render('admin/add-customer', {
         pageTitle: "Add-Customer Page"
     });
 };
+
 exports.postAddCustomer = (req, res, next) => {
     const customer = new Customer(
         req.body.fName,
@@ -35,6 +40,8 @@ exports.postAddCustomer = (req, res, next) => {
     customer.save();
     res.redirect('/');
 };
+
+
 
 //  PRODUCTS PAGES  //
 exports.getAddProductPage = (req, res, next) => {
@@ -76,6 +83,21 @@ exports.getProductsPage = (req, res, next) => {
     
     }); 
 };
+exports.getCart = (req, res, next) => {
+    res.render('/shop/cart', {
+    pageTitle: 'Your Cart',
+    path: "/cart"
+    
+    });
+};
+exports.postToCart = (req, res, next) => {
+    const prodId = req.body.productId;
+    console.log(prodId);
+
+    res.redirect('/');
+    
+};
+
 exports.getContactInfo = (req, res, next) => {
     res.render('admin/contact-info', {
         pageTitle: "Contact Information"
